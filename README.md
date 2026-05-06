@@ -4,7 +4,7 @@ A small, plainspoken band website for Whalefall. It is built with Next.js, Tailw
 
 The goal is to feel like a personal DIY artist site: simple title, small navigation, stacked sections, music links, shows, photos, notes, and a footer. No startup polish, no copied assets, no copied code from the reference site.
 
-## What The Band Can Edit
+## What Whalefall Can Edit
 
 Everything important is editable in Sanity Studio at `/studio` after the site is connected to a Sanity project.
 
