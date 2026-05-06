@@ -6,8 +6,8 @@ This is the simple guide for opening the Whalefall website and updating the cont
 
 When the site is fully deployed, there will be two main links:
 
-- Public website: `https://your-whalefall-site.vercel.app`
-- Editing dashboard: `https://your-whalefall-site.vercel.app/studio`
+- Public website: `https://whalefall-site.vercel.app`
+- Editing dashboard: `https://whalefall-site.vercel.app/studio`
 
 The exact website link may change if you connect a custom domain later.
 
@@ -23,7 +23,7 @@ This local preview only works on the computer that is running the website. It is
 
 1. Go to the editing dashboard:
 
-   `https://your-whalefall-site.vercel.app/studio`
+   `https://whalefall-site.vercel.app/studio`
 
 2. Log in with the Sanity account that has been invited to edit the Whalefall website.
 
