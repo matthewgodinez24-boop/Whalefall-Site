@@ -13,9 +13,10 @@ export const video = defineType({
     }),
     defineField({
       name: "embedLink",
-      title: "Embed Link",
+      title: "Video Link",
       type: "url",
-      description: "Use the embed URL, such as https://www.youtube.com/embed/VIDEO_ID."
+      description:
+        "Paste any YouTube or Vimeo link — share link, watch page, shorts, or embed URL. The site converts it for you. Examples: https://youtu.be/ABC123 · https://www.youtube.com/watch?v=ABC123 · https://vimeo.com/123456."
     }),
     defineField({
       name: "description",

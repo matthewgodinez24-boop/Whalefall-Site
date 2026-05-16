@@ -1,6 +1,14 @@
 import imageUrlBuilder from "@sanity/image-url";
 import { createClient } from "next-sanity";
-import type { BlogPost, GalleryImage, Release, SanityImage, SiteSettings, Video } from "@/lib/types";
+import type {
+  BlogPost,
+  GalleryImage,
+  Release,
+  SanityImage,
+  SiteSettings,
+  SketchLyric,
+  Video
+} from "@/lib/types";
 import {
   galleryQuery,
   homePageQuery,
@@ -8,6 +16,7 @@ import {
   postsQuery,
   releasesQuery,
   siteSettingsQuery,
+  sketchesLyricsQuery,
   videosQuery
 } from "@/lib/queries";
 
@@ -47,3 +56,4 @@ export const getPosts = () => safeFetch<BlogPost[]>(postsQuery);
 export const getPostBySlug = (slug: string) => safeFetch<BlogPost>(postBySlugQuery, { slug });
 export const getVideos = () => safeFetch<Video[]>(videosQuery);
 export const getGallery = () => safeFetch<GalleryImage[]>(galleryQuery);
+export const getSketchesLyrics = () => safeFetch<SketchLyric[]>(sketchesLyricsQuery);

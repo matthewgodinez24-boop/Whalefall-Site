@@ -30,6 +30,7 @@ export type Release = {
   title: string;
   description?: string;
   coverImage?: SanityImage;
+  heroVideoEmbed?: string;
   platformLinks?: PlatformLink[];
   releaseDate?: string;
 };
@@ -72,12 +73,31 @@ export type SketchLyric = {
   _id: string;
   title: string;
   text?: string;
+  sourceName?: string;
+  sourceUrl?: string;
   image?: SanityImage;
   date?: string;
 };
 
+export type TourDate = {
+  date: string;
+  city: string;
+  venue?: string;
+};
+
+export type Tour = {
+  _id: string;
+  title: string;
+  withBands?: string[];
+  posterImage?: SanityImage;
+  description?: string;
+  dates?: TourDate[];
+  isUpcoming?: boolean;
+};
+
 export type HomePageData = {
   featuredRelease?: Release;
+  upcomingTour?: Tour;
   recentShows?: Show[];
   mediaImages?: GalleryImage[];
   recentPosts?: BlogPost[];

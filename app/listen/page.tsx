@@ -18,22 +18,27 @@ export default async function ListenPage() {
   const releases = ((await getReleases()) as Release[] | null) || fallbackReleases;
 
   return (
-    <main>
-      <Section title="Listen">
-        <div className="space-y-8">
-          {releases.map((release) => (
-            <article key={release._id} className="grid gap-4 sm:grid-cols-[160px_1fr]">
-              <SimpleImage image={release.coverImage} alt={`${release.title} cover`} />
-              <div>
-                <h2 className="mt-0 text-xl font-normal">{release.title}</h2>
-                <p className="text-sm text-faded">{formatDate(release.releaseDate)}</p>
-                {release.description ? <p>{release.description}</p> : null}
+    <div className="main-layout">
+      <main>
+        <Section title="Listen">
+          <div className="albums-grid">
+            {releases.map((release) => (
+              <article key={release._id} className="album-card">
+                <SimpleImage
+                  image={release.coverImage}
+                  alt={`${release.title} cover`}
+                />
+                <div className="album-title">{release.title}</div>
+                <div className="album-meta">{formatDate(release.releaseDate)}</div>
+                {release.description ? (
+                  <p style={{ fontSize: 11, marginTop: 6 }}>{release.description}</p>
+                ) : null}
                 <PlatformLinks links={release.platformLinks} />
-              </div>
-            </article>
-          ))}
-        </div>
-      </Section>
-    </main>
+              </article>
+            ))}
+          </div>
+        </Section>
+      </main>
+    </div>
   );
 }

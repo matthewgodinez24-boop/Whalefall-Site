@@ -14,7 +14,9 @@ export function SimpleImage({
   const src = urlForImage(image)?.width(900).height(650).fit("max").url();
 
   if (!src) {
-    return <div className={`flex min-h-44 items-center justify-center border border-dashed border-line bg-white text-sm text-faded ${className}`}>image coming soon</div>;
+    return (
+      <div className={`image-placeholder ${className}`}>image coming soon</div>
+    );
   }
 
   return (
@@ -23,7 +25,8 @@ export function SimpleImage({
       alt={alt}
       width={900}
       height={650}
-      className={`border border-line bg-white ${className}`}
+      className={className}
+      style={{ border: "1px solid #999", display: "block", maxWidth: "100%", height: "auto" }}
       sizes="(max-width: 720px) 90vw, 640px"
     />
   );

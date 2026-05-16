@@ -8,9 +8,9 @@ export function Section({
   id?: string;
 }) {
   return (
-    <section id={id} className="mb-8">
-      <h2 className="mb-3 text-xl font-normal">{title}</h2>
-      {children}
+    <section id={id} className="bevel-box">
+      <h2 className="section-title">{title}</h2>
+      <div>{children}</div>
     </section>
   );
 }

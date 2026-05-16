@@ -10,9 +10,9 @@ export function SocialLinks({ links }: { links?: SocialLink[] }) {
   const safeLinks = links?.length ? links : fallbackLinks;
 
   return (
-    <ul className="flex flex-wrap gap-x-3 gap-y-1 p-0 text-sm" aria-label="Social links">
+    <ul className="social-links" aria-label="Social links">
       {safeLinks.map((link) => (
-        <li key={`${link.platform}-${link.url}`} className="list-none">
+        <li key={`${link.platform}-${link.url}`}>
           <a href={link.url}>{link.platform}</a>
         </li>
       ))}

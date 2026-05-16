@@ -30,6 +30,13 @@ export const release = defineType({
       fields: [{ name: "alt", title: "Alt Text", type: "string" }]
     }),
     defineField({
+      name: "heroVideoEmbed",
+      title: "Hero Video Link",
+      type: "url",
+      description:
+        "Optional. Paste any YouTube or Vimeo link — share link, watch page, or embed URL. If set, this video plays at the top of the homepage in place of the cover image."
+    }),
+    defineField({
       name: "platformLinks",
       title: "Platform Links",
       type: "array",
