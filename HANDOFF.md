@@ -323,7 +323,7 @@ Matthew works with multiple AI agents on this project in parallel. To avoid duel
 1. **Before any git operation,** check `git status` and `git fetch origin` to see what the other side has done.
 2. **If you're not Claude Code (this session),** stop before any `git`/`vercel`/`npm` command and ask Matthew to route it.
 3. **HANDOFF.md is the shared source of truth.** When you change something material — schema, route, dependency, integration — update this file in the same change.
-4. **The Drive copy of HANDOFF.md** at `https://drive.google.com/file/d/1Iaw9BR3TnsQ6Hm6ym2ZhKC4cwRLZbYgr/view` is the version Cowork/strategy Claude reads. When Claude Code updates this file, also refresh the Drive copy (or ask Matthew to).
+4. **The Drive copy of HANDOFF.md** (Matthew maintains the canonical link in the Cowork project context) is the version Cowork/strategy Claude reads. When Claude Code updates this file in the repo, ask Matthew to refresh the Drive copy — Drive doesn't expose an in-place update API, so a re-upload is required and the file ID changes.
 
 ---
 
