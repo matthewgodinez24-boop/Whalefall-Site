@@ -16,7 +16,8 @@ const navItems = [
   { href: "/lyrics", label: "Lyrics" },
   { href: "/blog", label: "Blog" },
   { href: "/videos", label: "Videos" },
-  { href: "/gallery", label: "Gallery" }
+  { href: "/gallery", label: "Gallery" },
+  { href: "/merch", label: "Merch" }
 ];
 
 export default async function RootLayout({

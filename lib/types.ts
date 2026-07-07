@@ -95,6 +95,38 @@ export type Tour = {
   isUpcoming?: boolean;
 };
 
+export type ProductVariant = {
+  label: string;
+  sku?: string;
+  priceOverride?: number;
+  inStock?: boolean;
+};
+
+export type Product = {
+  _id: string;
+  title: string;
+  slug?: string;
+  price: number;
+  description?: string;
+  category?: string;
+  inStock?: boolean;
+  featured?: boolean;
+  images?: SanityImage[];
+  variants?: ProductVariant[];
+};
+
+export type ProductListItem = {
+  _id: string;
+  title: string;
+  slug?: string;
+  price: number;
+  category?: string;
+  inStock?: boolean;
+  featured?: boolean;
+  image?: SanityImage;
+  variants?: Pick<ProductVariant, "label" | "inStock">[];
+};
+
 export type HomePageData = {
   featuredRelease?: Release;
   upcomingTour?: Tour;

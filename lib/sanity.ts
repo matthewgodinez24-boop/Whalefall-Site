@@ -3,6 +3,8 @@ import { createClient } from "next-sanity";
 import type {
   BlogPost,
   GalleryImage,
+  Product,
+  ProductListItem,
   Release,
   SanityImage,
   SiteSettings,
@@ -14,6 +16,8 @@ import {
   homePageQuery,
   postBySlugQuery,
   postsQuery,
+  productBySlugQuery,
+  productsQuery,
   releasesQuery,
   siteSettingsQuery,
   sketchesLyricsQuery,
@@ -57,3 +61,5 @@ export const getPostBySlug = (slug: string) => safeFetch<BlogPost>(postBySlugQue
 export const getVideos = () => safeFetch<Video[]>(videosQuery);
 export const getGallery = () => safeFetch<GalleryImage[]>(galleryQuery);
 export const getSketchesLyrics = () => safeFetch<SketchLyric[]>(sketchesLyricsQuery);
+export const getProducts = () => safeFetch<ProductListItem[]>(productsQuery);
+export const getProductBySlug = (slug: string) => safeFetch<Product>(productBySlugQuery, { slug });

@@ -20,6 +20,12 @@ export function formatTourDate(date?: string) {
   return `${month}/${day}`;
 }
 
+export function formatPrice(dollars?: number) {
+  if (typeof dollars !== "number" || Number.isNaN(dollars)) return "";
+  const cents = Math.round(dollars * 100);
+  return cents % 100 === 0 ? `$${cents / 100}` : `$${(cents / 100).toFixed(2)}`;
+}
+
 export function shortText(text?: string, max = 150) {
   if (!text) return "";
   if (text.length <= max) return text;

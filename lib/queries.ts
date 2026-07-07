@@ -56,3 +56,13 @@ export const galleryQuery = `*[_type == "galleryImage"] | order(_createdAt desc)
 export const sketchesLyricsQuery = `*[_type == "sketchLyric"] | order(date desc, _createdAt desc){
   _id, title, text, sourceName, sourceUrl, image, date
 }`;
+
+export const productsQuery = `*[_type == "product"] | order(featured desc, sortOrder asc, _createdAt desc){
+  _id, title, "slug": slug.current, price, category, inStock, featured,
+  "image": images[0], "variants": variants[]{ label, inStock }
+}`;
+
+export const productBySlugQuery = `*[_type == "product" && slug.current == $slug][0]{
+  _id, title, "slug": slug.current, price, description, category,
+  inStock, images, variants
+}`;
