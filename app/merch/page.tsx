@@ -22,7 +22,13 @@ export default async function MerchPage() {
       <main>
         <Section title="Merch">
           {products.length === 0 ? (
-            <p>nothing in the store yet — check back soon.</p>
+            <div>
+              <p>merch is coming.</p>
+              <p>
+                shirts, stickers, and music you can hold — we&apos;re setting up
+                the store now. check back soon.
+              </p>
+            </div>
           ) : (
             <div className="albums-grid">
               {products.map((product) => (
